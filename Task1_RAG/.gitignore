@@ -1,0 +1,11 @@
+# Secret API key: never upload it
+.env
+
+# Virtual environment (rebuilt with: pip install -r requirements.txt)
+.venv/
+
+# FAISS index: rebuilt automatically from the data folder
+faiss_index/
+
+# Python cache
+__pycache__/

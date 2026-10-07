@@ -1,0 +1,4 @@
+Certification: Backend Development Training
+Issuer: EXALT Technologies Ltd.
+Date: Issued Oct 2025 · Expired Jan 2026
+Description: The program focused on back-end development using Spring Boot and Java, covering RESTful API design, application architecture, and real-world software development practices.
