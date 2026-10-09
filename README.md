@@ -13,6 +13,8 @@ Longformer. It also covers applications for long documents, performance characte
 
 Folder: [`Task1_RAG`](Task1_RAG)
 
+**Live app:** [https://heba-career-chat-i7x5cvry3rcyuob8q7uf7k.streamlit.app/](https://heba-career-chat-i7x5cvry3rcyuob8q7uf7k.streamlit.app/)
+
 A Streamlit app that answers questions about my professional profile using Retrieval-Augmented Generation (RAG).
 My CVs, LinkedIn profile, certifications and GitHub READMEs are split into chunks, embedded with
 `all-MiniLM-L6-v2` and stored in a FAISS index. For each question, the closest chunks are sent to Google Gemini,

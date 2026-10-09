@@ -4,6 +4,8 @@ A Streamlit app that answers questions about my professional profile (CVs, Linke
 GitHub projects). The answers come **only** from these documents, and every fact in an answer is followed by its
 source, for example `[CV_ML.pdf (page 1)]`. Built with **LangChain**, **FAISS** and **Google Gemini**.
 
+**Live app:** [https://heba-career-chat-i7x5cvry3rcyuob8q7uf7k.streamlit.app/](https://heba-career-chat-i7x5cvry3rcyuob8q7uf7k.streamlit.app/)
+
 ## How it works
 
 ```text
@@ -119,6 +121,19 @@ streamlit run app.py
 The first start downloads the embedding model (about 90 MB) and builds the FAISS index; later starts are fast.
 After changing any file in `data/`, rebuild the index with `python vector_store.py`.
 To refresh the GitHub READMEs, run `python fetch_github.py` first.
+
+## Deployment (Streamlit Community Cloud)
+
+The app is deployed for free on **Streamlit Community Cloud**: [https://heba-career-chat-i7x5cvry3rcyuob8q7uf7k.streamlit.app/](https://heba-career-chat-i7x5cvry3rcyuob8q7uf7k.streamlit.app/)
+
+- **Main file path:** `Task1_RAG/app.py` (the app is inside a folder of the repository)
+- **Python version:** 3.13, the same as local development
+- **API key:** saved in the app's **Secrets** settings, in TOML format: `GEMINI_API_KEY = "..."`.
+  Streamlit makes it available as an environment variable, so `llm.py` reads it with `os.getenv` exactly like
+  the `.env` file on my computer. The key is never written in the code or uploaded to GitHub.
+- **FAISS index:** `faiss_index/` is not in the repository (`.gitignore`), so on the first start the app builds it
+  from the `data/` folder. No code change was needed for the deployment.
+- After a `git push`, Streamlit updates the app with the new code.
 
 ## Notes and limitations
 
