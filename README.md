@@ -1,5 +1,14 @@
 # Cellula Internship — Week 3
 
+## Task 0 — BigBird Research
+
+Folder: [`Task0_BigBird`](Task0_BigBird)
+
+A research report about the BigBird Transformer model ([BigBird_Research.pdf](Task0_BigBird/BigBird_Research.pdf)).
+It explains why standard self-attention has quadratic cost, how BigBird's sparse attention (window, global and
+random attention, implemented in blocks of 64 tokens) makes it linear, and compares its complexity with BERT and
+Longformer. It also covers applications for long documents, performance characteristics, advantages and limitations.
+
 ## Task 1 — Personal RAG Assistant
 
 Folder: [`Task1_RAG`](Task1_RAG)
@@ -15,6 +24,8 @@ Setup and usage instructions are in the app's [README](Task1_RAG/README.md).
 
 ```text
 Cellula_3week/
+├── Task0_BigBird/
+│   └── BigBird_Research.pdf
 └── Task1_RAG/
     ├── data/
     │   ├── cvs/          (4 CV PDFs)
